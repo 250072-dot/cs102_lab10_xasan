@@ -152,7 +152,7 @@ cout <<indexOflargestElement( array, size);
     int list2[size2];
     cout << strictlyEqual(list1,list2,size1,size2) << endl;
 
-*/
+
 
     //problem 6
     int siize;
@@ -163,5 +163,32 @@ cout <<indexOflargestElement( array, size);
         cout << "enter "<<i+1<<"-character: ";
         cin >> arrayy[i];
     }
+   int uppercase=0, lowercase=0,digits=0,sybols=0;
+  for (int i = 0; i < siize; i++) {
+      if ((int)arrayy[i]>=65 && (int)arrayy[i]<=90){uppercase++;}
+      else if ((int)arrayy[i]>=97 && (int)arrayy[i]<=122){lowercase++;}
+      else if ((int)arrayy[i]>=48 && (int)arrayy[i]<=57){digits++;}
+      else {sybols++;}
+  }
+    cout <<"uppercase: "<<uppercase<<endl;
+    cout <<"lowercase: "<<lowercase<<endl;
+    cout <<"digits: "<<digits<<endl;
+    cout <<"Scecial: "<<sybols<<endl;
 
-return 0;}
+    */
+
+
+//problem 7
+
+    cout <<"enter number of numbers:";
+    int n;
+    cin >>n;
+    float array[n];
+    for (int i = 0; i < n; i++) {
+        cout << "enter "<<i+1<<"-number: ";
+        cin >> array[i];
+
+    }
+
+
+    return 0;}
