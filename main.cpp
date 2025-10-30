@@ -19,7 +19,49 @@ float mineee(int n) {
     return mini;
 }
 
+//problem 4
 
+int indexOflargestElement(double array[],int size) {
+    for (int i = 0; i < size; i++) {
+        cout << "enter "<<i+1<<"-number :";
+        cin>>array[i];
+    }
+    double big = array[0];
+    for (int i = 1; i < size; i++) {
+        if (array[i] > big) {
+            big = array[i];
+        }
+
+    }
+    for (int i = 0; i < size; i++) {
+        if (array[i] == big) {
+            return i;
+            break;
+        }
+    }
+}
+
+   //problem 5
+
+
+bool strictlyEqual( int list1[],  int list2[], int size1,int size2) {
+    if (size1 != size2) {return 0;}
+     for (int i = 0; i < size1; i++) {
+         cout << "enter "<<i+1<<"-number of list 1: ";
+         cin>>list1[i];
+     }
+     for (int i = 0; i < size2; i++) {
+         cout << "enter "<<i+1<<"-number of list 2: ";
+         cin>>list2[i];
+    }
+
+    for (int i = 0; i < size1; i++) {
+        if (list1[i] != list2[i]) {return 0;}
+
+    }
+    return 1;
+
+}
 
 int main() {
 
@@ -70,7 +112,7 @@ cout <<"sum is "<<sum<<endl;
     cin >> n;
     cout <<mineee(n);
 
-    */
+
 //problem 11
     int n,target;
     cout <<" enter the target; ";
@@ -83,12 +125,43 @@ cout <<"sum is "<<sum<<endl;
         cin >> array[i];}
     for (int j=0; j < n-1; j++) {
         for (int k=j+1; k < n; k++) {
-            if (j+k==target) {
-                cout << "("<<j<<","<<k<<")"<<endl;")";
+            if (array[j]+array[k]==target) {
+                cout << "("<<j<<","<<k<<")"<<endl;
             }
         }
     }
 
 
+//problem 4
+
+
+    int size;
+    cin >> size;
+    double array[size];
+cout <<indexOflargestElement( array, size);
+
+
+
+
+    //problem 5
+
+    int size1, size2;
+    cout << "enter size of list 1 and list 2 : ";
+    cin >> size1 >> size2;
+    int list1[size1];
+    int list2[size2];
+    cout << strictlyEqual(list1,list2,size1,size2) << endl;
+
+*/
+
+    //problem 6
+    int siize;
+    cout << "enter size of characters: ";
+    cin >> siize;
+    char arrayy[siize];
+    for (int i = 0; i < siize; i++) {
+        cout << "enter "<<i+1<<"-character: ";
+        cin >> arrayy[i];
+    }
 
 return 0;}
