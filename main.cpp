@@ -189,6 +189,15 @@ cout <<indexOflargestElement( array, size);
         cin >> array[i];
 
     }
-
-
+    int array3[n];
+    int order=0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (array[i] > array[j]) {order++;}
+        }
+        array3[order]=array[i];
+    }
+     for (int i = 0; i < n; i++) {
+         cout << array3[i] << " ";
+     }
     return 0;}
